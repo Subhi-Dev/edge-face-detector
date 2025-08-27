@@ -12,9 +12,11 @@
   },
   "dependencies": {
     "@expo/vector-icons": "^14.1.0",
+    "@flyskywhy/react-native-gcanvas": "^6.0.20",
     "@react-navigation/bottom-tabs": "^7.3.10",
     "@react-navigation/elements": "^2.3.8",
     "@react-navigation/native": "^7.1.6",
+    "events": "^3.3.0",
     "expo": "~53.0.22",
     "expo-blur": "~14.1.5",
     "expo-camera": "~16.1.11",
@@ -55,6 +57,7 @@
     "eslint-config-expo": "~9.2.0",
     "prettier-plugin-tailwindcss": "^0.5.11",
     "tailwindcss": "^3.4.17",
+    "ts-node": "^10.9.2",
     "typescript": "~5.8.3"
   },
   "private": true
