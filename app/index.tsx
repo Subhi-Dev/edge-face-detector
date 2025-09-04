@@ -1,7 +1,7 @@
 import { CameraView } from 'expo-camera'
 import { cssInterop } from 'nativewind'
 import { useEffect, useRef, useState } from 'react'
-import { Button, Pressable, StyleSheet, Text, View } from 'react-native'
+import { Button, StyleSheet, Text, View } from 'react-native'
 import { useTensorflowModel } from 'react-native-fast-tflite'
 import {
   Camera,
@@ -13,7 +13,7 @@ import { useSharedValue } from 'react-native-worklets-core'
 import { useResizePlugin } from 'vision-camera-resize-plugin'
 
 export default function HomeScreen() {
-  const device = useCameraDevice('front')
+  const device = useCameraDevice('back')
   const { hasPermission, requestPermission } = useCameraPermission()
   const predictedAge = useSharedValue<string>('0')
   const ageConfidence = useSharedValue<number>(0)
@@ -197,11 +197,6 @@ export default function HomeScreen() {
           ref={ref}
           frameProcessor={frameProcessor}
         />
-      </View>
-      <View className="flex flex-row gap-2">
-        <Pressable className="bg-blue-500 p-4 rounded mt-4">
-          <Text className="text-white font-medium">Upload from Gallery</Text>
-        </Pressable>
       </View>
       <View className="bg-white rounded-lg p-4 m-4 w-11/12">
         <Text className="font-bold text-2xl mb-2">Predictions:</Text>
